@@ -1,0 +1,11 @@
+services:
+  # Nuxt3
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - './myproject:/usr/src/app'
+    user: '1000:1000'

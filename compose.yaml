@@ -6,6 +6,10 @@ services:
       dockerfile: ./docker/Dockerfile
     ports:
       - '3000:3000'
+      
+      # ホットリロードにPort 24678が使用されている模様だが、
+      # ソースをマウントしているため解放しなくともリロードされる
+      # - '24678:24678'
     volumes:
       - './myproject:/usr/src/app'
     user: '1000:1000'

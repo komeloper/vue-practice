@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
@@ -16,11 +18,14 @@
   },
   "devDependencies": {
     "@aspida/axios": "^1.14.0",
+    "@nuxt/eslint": "^0.7.3",
     "aspida": "^1.14.0",
     "axios": "^1.7.9",
+    "eslint": "^9.17.0",
     "install": "^0.13.0",
     "msw": "^2.6.8",
     "pinia": "^2.3.0",
+    "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }
 }

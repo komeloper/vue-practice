@@ -10,5 +10,30 @@ export default defineNuxtConfig({
         usePolling: true,
       }
     }
-  }
+  },
+
+  modules: [
+    '@nuxt/eslint',
+  ],
+  eslint: {
+    // ESLint Stylisticを有効化
+    config: {
+      stylistic: {
+        'indent': 4,
+
+        // セミコロン
+        'semi': true,
+
+        // シングルクォートを使用
+        'quotes': 'single',
+
+        // 末尾カンマを矯正
+        'comma-dangle': 'always',
+
+        // アロー関数を括弧で囲む
+        'arrow-parents': 'always',
+      },
+    },
+  },
+
 })

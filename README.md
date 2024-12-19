@@ -37,3 +37,18 @@ $ docker run --rm -u 1000 \
 npm install pinia aspida @aspida/axios axios \
 npm install -D vitest msw
 ```
+
+
+3. ESLintの導入
+
+    1. コンテナ内で下記を実行
+
+    ```sh
+    $ npm install -D @nuxt/eslint eslint typescript
+    ```
+
+    2. `eslint.config.mjs` を作成
+    3. `nuxt.config.ts` に ESLintの設定を追記
+    4. ESLint Stylistic を有効化する場合は `nuxt.config.ts` に設定を追記
+    5. ESLintを有効化するにはNuxtを再起動する必要あり（コンテナの再起動）
+

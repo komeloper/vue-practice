@@ -81,3 +81,32 @@ npm install -D vitest msw
     4. ESLint Stylistic を有効化する場合は `nuxt.config.ts` に設定を追記
     5. ESLintを有効化するにはNuxtを再起動する必要あり（コンテナの再起動）
 
+
+5. stylelintの導入
+
+    1. コンテナ内で下記を実行し、パッケージをインストール
+
+        ```sh
+        $ npm install -D stylelint @nuxtjs/stylelint-module stylelint-config-standard stylelint-config-standard-vue stylelint-config-recess-order postcss-html
+        ```
+
+    2. `stlyelint.config.mjs` を作成
+    3. `nuxt.config.ts` に stylelintの設定を追記
+
+6. `typecheck` の設定
+
+    1. コンテナ内で下記を実行し、パッケージをインストール
+
+        ```sh
+        $ npm install -D typescript vue-tsc
+        ```
+
+    2. `package.json` の `scripts` に下記を追記
+
+        ```json
+        {
+            "scripts": {
+                "typecheck": "nuxi typecheck"
+            }
+        }
+        ```

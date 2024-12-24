@@ -22,6 +22,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/eslint',
+    '@nuxtjs/stylelint-module',
   ],
   eslint: {
     // ESLint Stylisticを有効化
@@ -42,6 +43,10 @@ export default defineNuxtConfig({
         'arrow-parents': 'always',
       },
     },
+  },
+
+  stylelint: {
+    // 
   },
 
 })

@@ -1,11 +1,16 @@
-import withNuxt from './.nuxt/eslint.config.mjs';
+import prettierConfig from 'eslint-plugin-prettier/recommended';
+import { createConfigForNuxt } from '@nuxt/eslint-config/flat';
 
-export default withNuxt(
+export default createConfigForNuxt({
+    dirs: {
+        src: ['src'],
+    },
+}).append(
     {
-        // 意図せず設定ファイルを遡らない様にする
-        root: true,
-
         files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
+
+        // 対象外設定
+        ignores: ['node_modules/*', 'dist/*', '.gitignore', '.nuxt/*'],
 
         // ルール設定
         rules: {
@@ -26,7 +31,7 @@ export default withNuxt(
             'vue/singleline-html-element-content-newline': 'off',
             // 複数行の時に末尾のカンマを許容
             'comma-dangle': ['error', 'only-multiline'],
-        
+
             // imgのセルフクローズを矯正
             'vue/html-self-closing': [
                 'error',
@@ -49,5 +54,6 @@ export default withNuxt(
             // コンポーネント名のマルチワード警告を無効化
             'vue/multi-word-component-names': 'off',
         },
-    }
+    },
+    prettierConfig
 );

@@ -17,8 +17,8 @@ export default {
     ],
 
     rules: {
-        // インデントを2スペースに設定
-        'indentation': 2,
+        // インデントを4スペースに設定
+        indentation: 4,
 
         // 連続した空行の数を制限
         'max-empty-lines': 1,

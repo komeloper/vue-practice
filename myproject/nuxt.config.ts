@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ['@nuxtjs/stylelint-module'],
+    modules: ['@nuxtjs/stylelint-module', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt'],
 
     stylelint: {
         //

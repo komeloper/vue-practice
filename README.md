@@ -78,7 +78,7 @@ npm install -D vitest msw
 
     2. `eslint.config.mjs` を作成し、ESLintの設定を追記
     3. `prettier.config.mjs` を作成し、prettierの設定を追記
-    4. ESLint Stylistic を有効化する場合は `nuxt.config.ts` に設定を追記
+    4. ESLint Stylistic を有効化する場合は `nuxt.config.ts` に設定を追記(prettierを使用する場合は不要)
     5. ESLintを有効化するにはNuxtを再起動する必要あり（コンテナの再起動）
 
 
@@ -93,20 +93,15 @@ npm install -D vitest msw
     2. `stlyelint.config.mjs` を作成
     3. `nuxt.config.ts` に stylelintの設定を追記
 
-6. `typecheck` の設定
+6. piniaの導入
 
     1. コンテナ内で下記を実行し、パッケージをインストール
-
+    
         ```sh
-        $ npm install -D typescript vue-tsc
+        $ npm install -D pinia @pinia/nuxt pinia-plugin-persistedstate
         ```
+    
+    2. `nuxt.config.ts` の `modules` に `@pinia/nuxt`、`pinia-plugin-persistedstate/nuxt` を追記
 
-    2. `package.json` の `scripts` に下記を追記
-
-        ```json
-        {
-            "scripts": {
-                "typecheck": "nuxi typecheck"
-            }
-        }
-        ```
+    3. プロジェクトの `composables` ディレクトリ内にストアについて記載
+    

@@ -9,6 +9,9 @@ dist
 # stylelint
 .stylelintcache
 
+# aspida
+\$api.ts
+
 # Node dependencies
 node_modules
 

@@ -19,18 +19,8 @@ type Pokemon = {
     is_default: boolean;
     order: number;
     weight: number;
-    // abilities: [];
-    // forms: [];
-    // game_indices: [];
-    // held_items: [];
     location_area_encounters: string;
-    // moves: [];
-    // post_types: [];
-    // sprites: {};
-    // cries: {};
     species: PokemonSprites;
-    // stats: [];
-    // types: [];
 };
 
 export type Methods = DefineMethods<{
@@ -41,9 +31,4 @@ export type Methods = DefineMethods<{
 
         resBody: Pokemon;
     };
-
-    // post: {
-    //     reqBody: {};
-    //     resBody: {};
-    // };
 }>;

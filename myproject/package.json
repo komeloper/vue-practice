@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "api:build": "aspida",
+    "api:build": "aspida --config aspida.config.cjs",
     "build": "nuxt build --dotenv .env.local",
     "dev": "nuxt dev --dotenv .env.local",
     "fix": "npm run prettier && npm run lint:scripts --fix && npm run lint:styles --fix",
@@ -23,11 +23,12 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@aspida/fetch": "^1.14.0",
+    "@aspida/axios": "^1.14.0",
     "@nuxt/eslint-config": "^0.7.4",
     "@nuxtjs/stylelint-module": "^5.2.0",
     "@pinia/nuxt": "^0.9.0",
     "aspida": "^1.14.0",
+    "axios": "^1.7.9",
     "eslint": "^9.17.0",
     "eslint-plugin-prettier": "^5.2.1",
     "install": "^0.13.0",

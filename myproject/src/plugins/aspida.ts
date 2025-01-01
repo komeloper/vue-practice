@@ -1,7 +1,7 @@
-import aspida from '@aspida/fetch';
+import aspida from '@aspida/axios';
 import api from '~/api/$api';
 
-export default defineNuxtPlugins((NuxtApp) => {
-    const fetchClient = aspida(fetch);
-    NuxtApp.provide('api', api(fetchClient));
+export default defineNuxtPlugin((NuxtApp) => {
+    const client = api(aspida());
+    NuxtApp.provide('api', client);
 });

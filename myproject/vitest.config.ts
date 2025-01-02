@@ -3,7 +3,7 @@ import { coverageConfigDefaults } from 'vitest/config';
 
 export default defineVitestConfig({
     test: {
-        root: 'src/',
+        // root: 'src/',
         environment: 'nuxt',
         globals: true,
         coverage: {

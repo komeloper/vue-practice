@@ -12,6 +12,9 @@ dist
 # aspida
 \$api.ts
 
+# tests
+src/coverage/
+
 # Node dependencies
 node_modules
 

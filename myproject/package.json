@@ -30,6 +30,7 @@
     "@nuxt/test-utils": "^3.15.1",
     "@nuxtjs/stylelint-module": "^5.2.0",
     "@pinia/nuxt": "^0.9.0",
+    "@vitest/coverage-v8": "^2.1.8",
     "@vue/test-utils": "^2.4.6",
     "aspida": "^1.14.0",
     "axios": "^1.7.9",

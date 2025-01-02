@@ -104,4 +104,27 @@ npm install -D vitest msw
     2. `nuxt.config.ts` の `modules` に `@pinia/nuxt`、`pinia-plugin-persistedstate/nuxt` を追記
 
     3. プロジェクトの `composables` ディレクトリ内にストアについて記載
+
+7. aspidaの導入
+
+    1. コンテナ内で下記を実行し、パッケージをインストール
+        ```sh
+        $ npm install -D aspida @aspida/axios axios
+        ```
+    2. `aspida.config.cjs` を作成
+    3. `src/api` ディレクトリを作成後、aspidaの作法に則り、apiの型を作成
+    4. コンテナ内で `npx aspida --config aspida.config.cjs` を実行し、`src/api/$api.ts` を生成
+    5. `src/plugins/aspida.ts` を作成し下記を記述
+
+        ```typescript:src/plugins/aspida.ts
+        import aspida from '@aspida/axios';
+        import api from '~/api/$api';
+
+        export default defineNuxtPlugin((NuxtApp) => {
+            const client = api(aspida());
+            NuxtApp.provide('api', client);
+        });
+        ```
+
+    6. コンテナを再起動
     

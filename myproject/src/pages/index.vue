@@ -25,6 +25,9 @@ async function getPokemon() {
         pokemon.value = null;
     }
 }
+
+// VitestのSample用コンポーネント
+const name = ref('World');
 </script>
 
 <template>
@@ -51,6 +54,14 @@ async function getPokemon() {
             <div v-if="error" class="error">
                 <p>{{ error }}</p>
             </div>
+        </section>
+
+        <section>
+            <h2>Vitest Sample</h2>
+            <TestSample :name="name" />
+            <p>
+                <input type="text" v-model="name" />
+            </p>
         </section>
     </div>
 </template>

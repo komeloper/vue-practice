@@ -20,7 +20,16 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ['@nuxtjs/stylelint-module', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt'],
+    modules: ['@nuxtjs/stylelint-module', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxt/test-utils/module'],
+
+    typescript: {
+        tsConfig: {
+            compilerOptions: {
+                // globalsのTypeScriptサポート
+                types: ['vitest/globals'],
+            },
+        },
+    },
 
     stylelint: {
         //

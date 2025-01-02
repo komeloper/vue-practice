@@ -93,6 +93,7 @@ npm install -D vitest msw
     2. `stlyelint.config.mjs` を作成
     3. `nuxt.config.ts` に stylelintの設定を追記
 
+
 6. piniaの導入
 
     1. コンテナ内で下記を実行し、パッケージをインストール
@@ -104,6 +105,7 @@ npm install -D vitest msw
     2. `nuxt.config.ts` の `modules` に `@pinia/nuxt`、`pinia-plugin-persistedstate/nuxt` を追記
 
     3. プロジェクトの `composables` ディレクトリ内にストアについて記載
+
 
 7. aspidaの導入
 
@@ -127,4 +129,15 @@ npm install -D vitest msw
         ```
 
     6. コンテナを再起動
-    
+
+
+8. vitestの導入
+
+    1. コンテナ内で下記を実行し、パッケージをインストール
+
+        ```sh
+        $ npm install -D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core 
+        ```
+    2. `nuxt.config.ts` に `@nuxt/test-utils/module` を使用するように設定を追記
+    3. `vitest.config.ts` を作成し、必要な設定を追記
+    4. package.json の scripts に `"test": "vitest",` を追記

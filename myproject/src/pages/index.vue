@@ -60,7 +60,7 @@ const name = ref('World');
             <h2>Vitest Sample</h2>
             <TestSample :name="name" />
             <p>
-                <input type="text" v-model="name" />
+                <input v-model="name" type="text" />
             </p>
         </section>
     </div>
